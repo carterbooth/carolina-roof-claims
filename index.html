@@ -14,8 +14,7 @@
     <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Rainyday.js for realistic raindrops -->
-    <script src="https://cdn.jsdelivr.net/npm/rainyday.js@1.1.0/rainyday.min.js"></script>
+
     
     <style>
         /* Modern CSS Reset & Variables */
@@ -878,53 +877,48 @@
     </footer>
     
     <script>
-        // Initialize realistic raindrops effect
+        // Simple, safe raindrops effect without external libraries
         document.addEventListener('DOMContentLoaded', function() {
-            // Create a canvas background for the rain effect
             const rainContainer = document.getElementById('rain-container');
             
-            // Create a background div with gradient to serve as the "glass"
-            const glassBackground = document.createElement('div');
-            glassBackground.style.position = 'absolute';
-            glassBackground.style.inset = '0';
-            glassBackground.style.background = 'linear-gradient(135deg, rgba(30, 64, 175, 0.7) 0%, rgba(79, 131, 204, 0.5) 50%, rgba(55, 65, 81, 0.8) 100%)';
-            glassBackground.style.zIndex = '1';
-            rainContainer.appendChild(glassBackground);
-            
-            // Initialize RainyDay.js on the background
-            try {
-                const rainEffect = new RainyDay({
-                    parentElement: rainContainer,
-                    blur: 8,
-                    opacity: 0.8,
-                    fps: 30,
-                    enableCollisions: true,
-                    gravityThreshold: 3,
-                    gravityAngle: Math.PI / 2,
-                    gravityAngleVariance: Math.PI / 16,
-                    width: window.innerWidth,
-                    height: window.innerHeight,
-                    position: 'absolute',
-                    top: '0px',
-                    left: '0px'
-                });
+            // Create CSS-only raindrops that won't cause stack overflow
+            function createRaindrop() {
+                const drop = document.createElement('div');
+                drop.className = 'raindrop';
+                drop.style.cssText = `
+                    position: absolute;
+                    width: ${Math.random() * 3 + 1}px;
+                    height: ${Math.random() * 8 + 4}px;
+                    background: rgba(255,255,255,0.6);
+                    border-radius: 50px;
+                    left: ${Math.random() * 100}%;
+                    animation: fall ${Math.random() * 3 + 2}s linear infinite;
+                    animation-delay: ${Math.random() * 2}s;
+                `;
+                rainContainer.appendChild(drop);
                 
-                // Start the rain animation
-                rainEffect.rain([
-                    [1, 0, 0.88],  // Light rain
-                    [2, 2, 0.9],   // Medium drops
-                    [3, 3, 0.75]   // Heavy drops
-                ], 100);
-                
-                // Handle window resize
-                window.addEventListener('resize', function() {
-                    rainEffect.set('width', window.innerWidth);
-                    rainEffect.set('height', window.innerHeight);
-                });
-                
-            } catch (error) {
-                console.log('RainyDay.js not available, skipping rain effect');
+                // Remove after animation
+                setTimeout(() => {
+                    if (drop.parentNode) {
+                        drop.parentNode.removeChild(drop);
+                    }
+                }, 5000);
             }
+            
+            // Add CSS animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fall {
+                    to { 
+                        transform: translateY(100vh); 
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Create raindrops periodically
+            setInterval(createRaindrop, 200);
         });
     </script>
 </body>
