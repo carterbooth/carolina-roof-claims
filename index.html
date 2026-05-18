@@ -233,7 +233,7 @@
         .assessment-card {
             background: white;
             border-radius: var(--radius-xl);
-            padding: var(--space-xl);
+            padding: var(--space-lg);
             box-shadow: var(--shadow-xl);
             position: relative;
             border: 1px solid rgba(79, 131, 204, 0.1);
@@ -252,7 +252,7 @@
 
         .form-header {
             text-align: center;
-            margin-bottom: var(--space-xl);
+            margin-bottom: var(--space-md);
         }
 
         .form-header h2 {
@@ -270,7 +270,7 @@
 
         .form-grid {
             display: grid;
-            gap: var(--space-md);
+            gap: var(--space-sm);
         }
 
         .form-group {
@@ -281,12 +281,12 @@
         .form-group label {
             font-weight: 600;
             color: var(--storm-dark);
-            margin-bottom: var(--space-xs);
+            margin-bottom: 0.25rem;
             font-size: 0.9rem;
         }
 
         .form-input {
-            padding: var(--space-md);
+            padding: var(--space-xs) var(--space-sm);
             border: 2px solid #e5e7eb;
             border-radius: var(--radius-md);
             font-family: inherit;
@@ -307,7 +307,7 @@
         }
 
         textarea.form-input {
-            min-height: 100px;
+            min-height: 60px;
             resize: vertical;
         }
 
@@ -316,13 +316,13 @@
             color: white;
             border: none;
             border-radius: var(--radius-md);
-            padding: var(--space-md) var(--space-lg);
+            padding: var(--space-sm) var(--space-lg);
             font-family: var(--font-heading);
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: var(--space-md);
+            margin-top: var(--space-sm);
             position: relative;
             overflow: hidden;
         }
@@ -545,31 +545,34 @@
         .insurance-section {
             background: white;
             text-align: center;
+            padding: var(--space-lg) 0;
         }
 
         .insurance-section h3 {
             font-family: var(--font-heading);
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 600;
             color: var(--storm-dark);
-            margin-bottom: var(--space-xl);
+            margin-bottom: var(--space-md);
         }
 
         .insurance-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: var(--space-lg);
-            max-width: 800px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: var(--space-sm);
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .insurance-item {
             background: white;
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
+            padding: var(--space-sm);
+            border-radius: var(--radius-md);
             border: 1px solid #e5e7eb;
             box-shadow: var(--shadow-sm);
             transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
         .insurance-item:hover {
