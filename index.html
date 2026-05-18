@@ -136,9 +136,9 @@
         /* Hero Section */
         .hero {
             min-height: 95vh;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--carolina-blue) 50%, var(--storm-gray) 100%);
+            background: linear-gradient(-45deg, #1e40af, #3b82f6, #4f83cc, #6366f1, #1e40af);
             background-size: 400% 400%;
-            animation: gradientShift 20s ease infinite;
+            animation: gradientShift 15s ease infinite;
             position: relative;
             display: flex;
             align-items: center;
@@ -153,15 +153,80 @@
             50% { background-position: 100% 50%; }
         }
 
-        /* Real rain on window gif background */
+        /* Professional floating orbs background */
         .rain-container {
             position: absolute;
             inset: 0;
             pointer-events: none;
             z-index: 2;
-            background: url('https://i.imgur.com/IiM0sTH.gif') center/cover no-repeat;
-            opacity: 0.3;
-            mix-blend-mode: screen;
+            overflow: hidden;
+        }
+        
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(1px);
+            animation: float linear infinite;
+        }
+        
+        .orb-1 {
+            width: 120px;
+            height: 120px;
+            left: 10%;
+            animation-duration: 20s;
+            animation-delay: 0s;
+        }
+        
+        .orb-2 {
+            width: 80px;
+            height: 80px;
+            left: 80%;
+            animation-duration: 25s;
+            animation-delay: -5s;
+        }
+        
+        .orb-3 {
+            width: 150px;
+            height: 150px;
+            left: 50%;
+            animation-duration: 30s;
+            animation-delay: -10s;
+        }
+        
+        .orb-4 {
+            width: 60px;
+            height: 60px;
+            left: 25%;
+            animation-duration: 18s;
+            animation-delay: -8s;
+        }
+        
+        .orb-5 {
+            width: 100px;
+            height: 100px;
+            left: 75%;
+            animation-duration: 22s;
+            animation-delay: -12s;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(90vh) translateX(0) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: translateY(-10vh) translateX(0) scale(1);
+            }
+            100% {
+                transform: translateY(-20vh) translateX(0) scale(0);
+                opacity: 0;
+            }
         }
 
         .hero-content {
@@ -667,8 +732,14 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <!-- Realistic raindrops effect -->
-        <div class="rain-container" id="rain-container"></div>
+        <!-- Professional floating orbs -->
+        <div class="rain-container" id="rain-container">
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
+            <div class="floating-orb orb-4"></div>
+            <div class="floating-orb orb-5"></div>
+        </div>
         
         <div class="container">
             <div class="hero-content">
