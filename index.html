@@ -153,12 +153,15 @@
             50% { background-position: 100% 50%; }
         }
 
-        /* Rainday.js canvas container */
+        /* Real rain on window gif background */
         .rain-container {
             position: absolute;
             inset: 0;
             pointer-events: none;
             z-index: 2;
+            background: url('https://i.imgur.com/IiM0sTH.gif') center/cover no-repeat;
+            opacity: 0.3;
+            mix-blend-mode: screen;
         }
 
         .hero-content {
@@ -876,50 +879,6 @@
         </div>
     </footer>
     
-    <script>
-        // Simple, safe raindrops effect without external libraries
-        document.addEventListener('DOMContentLoaded', function() {
-            const rainContainer = document.getElementById('rain-container');
-            
-            // Create CSS-only raindrops that won't cause stack overflow
-            function createRaindrop() {
-                const drop = document.createElement('div');
-                drop.className = 'raindrop';
-                drop.style.cssText = `
-                    position: absolute;
-                    width: ${Math.random() * 3 + 1}px;
-                    height: ${Math.random() * 8 + 4}px;
-                    background: rgba(255,255,255,0.6);
-                    border-radius: 50px;
-                    left: ${Math.random() * 100}%;
-                    animation: fall ${Math.random() * 3 + 2}s linear infinite;
-                    animation-delay: ${Math.random() * 2}s;
-                `;
-                rainContainer.appendChild(drop);
-                
-                // Remove after animation
-                setTimeout(() => {
-                    if (drop.parentNode) {
-                        drop.parentNode.removeChild(drop);
-                    }
-                }, 5000);
-            }
-            
-            // Add CSS animation
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes fall {
-                    to { 
-                        transform: translateY(100vh); 
-                        opacity: 0;
-                    }
-                }
-            `;
-            document.head.appendChild(style);
-            
-            // Create raindrops periodically
-            setInterval(createRaindrop, 200);
-        });
-    </script>
+
 </body>
 </html><!-- force rebuild -->
