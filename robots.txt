@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Important SEO pages
+Allow: /problems-v2/
+Allow: /contractors/
+Allow: /resources-v2.html
+
+# Sitemap
+Sitemap: https://carolinaroofclaims.com/sitemap.xml
+
+# Clean URLs
+Allow: /*.html$
