@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolina Roof Claims - Free Storm Damage Assessment</title>
+    <meta name="description" content="Certified roof inspector connects you with insurance-approved contractors. Free storm damage assessment and claim assistance throughout the region.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-home-lg-alt"></i>
+                <span>Carolina Roof Claims</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#process">How It Works</a>
+                <a href="#about">About</a>
+                <a href="help.html">Help Center</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Expert Storm Damage Assessment & Insurance Claim Assistance</h1>
+                    <p class="hero-subtitle">10+ years handling thousands of roof insurance claims. I connect homeowners with certified local contractors and help navigate the insurance process.</p>
+                    
+                    <div class="trust-badges">
+                        <div class="badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>Licensed Insurance Inspector</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>3000+ Claims Processed</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>10+ Years Experience</span>
+                        </div>
+                    </div>
+
+                    <div class="coverage-area">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Serving Triangle area and surrounding communities</span>
+                    </div>
+                </div>
+
+                <div class="hero-form">
+                    <div class="form-container">
+                        <h2>Get Your Free Roof Assessment</h2>
+                        <p class="form-subtitle">Connect with insurance specialist contractors in 24 hours</p>
+                        
+                        <form id="leadForm" class="lead-form">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Property Address *</label>
+                                <input type="text" id="address" name="address" placeholder="Street address, City, State" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="damage_date">When did the damage occur? *</label>
+                                <select id="damage_date" name="damage_date" required>
+                                    <option value="">Select timeframe...</option>
+                                    <option value="recent_storm">Recent storm (last 30 days)</option>
+                                    <option value="last_season">Last storm season</option>
+                                    <option value="gradual">Gradual over time</option>
+                                    <option value="not_sure">Not sure</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="damage_type">What type of damage? *</label>
+                                <select id="damage_type" name="damage_type" required>
+                                    <option value="">Select damage type...</option>
+                                    <option value="hail">Hail damage</option>
+                                    <option value="wind">Wind damage</option>
+                                    <option value="leak">Active leak</option>
+                                    <option value="missing_shingles">Missing/loose shingles</option>
+                                    <option value="multiple">Multiple types</option>
+                                    <option value="not_sure">Not sure - need inspection</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="insurance_status">Insurance claim status? *</label>
+                                <select id="insurance_status" name="insurance_status" required>
+                                    <option value="">Select status...</option>
+                                    <option value="not_filed">Haven't filed yet</option>
+                                    <option value="planning">Planning to file</option>
+                                    <option value="filed">Already filed</option>
+                                    <option value="approved">Claim approved</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="urgency">How urgent is this? *</label>
+                                <select id="urgency" name="urgency" required>
+                                    <option value="">Select urgency...</option>
+                                    <option value="emergency">Emergency - active leak</option>
+                                    <option value="soon">Need repair soon</option>
+                                    <option value="planning">Planning ahead</option>
+                                    <option value="exploring">Just exploring options</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-search"></i>
+                                Get Free Assessment
+                            </button>
+                            
+                            <p class="privacy-note">
+                                <i class="fas fa-lock"></i>
+                                Your information is secure and will only be shared with pre-qualified contractors
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <h2>How Insurance Claims Work</h2>
+            <p class="section-subtitle">As a certified roof inspector, I help streamline the entire process</p>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Free Assessment</h3>
+                        <p>Professional inspection to document storm damage and determine if you have a viable insurance claim</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Insurance Claim Filing</h3>
+                        <p>Our network contractors help you file your claim properly with detailed documentation and photos</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Claim Approval</h3>
+                        <p>Work directly with insurance adjusters to get your claim approved for maximum coverage</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Quality Repair</h3>
+                        <p>Licensed contractors who specialize in insurance work complete your roof repair to full code compliance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose Our Network?</h2>
+                    
+                    <div class="credentials">
+                        <div class="credential">
+                            <i class="fas fa-user-tie"></i>
+                            <div>
+                                <h3>Carter Booth - Certified Roof Inspector</h3>
+                                <p>Licensed insurance specialist with 10+ years experience handling thousands of roof insurance claims. My goal is to help homeowners navigate the complex insurance process and connect them with certified local roofers who get the job done right.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="credential">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <h3>Insurance Specialists</h3>
+                                <p>All contractors in our network specialize in insurance claims and maintain excellent relationships with adjusters.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="credential">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <h3>Proven Track Record</h3>
+                                <p>3000+ successful insurance claims processed with average settlement values 15% higher than industry standard.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="insurance-logos">
+                        <h4>Approved by Major Insurance Companies:</h4>
+                        <div class="logos">
+                            <span>State Farm</span>
+                            <span>Allstate</span>
+                            <span>Travelers</span>
+                            <span>USAA</span>
+                            <span>Progressive</span>
+                            <span>Liberty Mutual</span>
+                            <span>Farmers</span>
+                            <span>Nationwide</span>
+                            <span>Auto-Owners</span>
+                            <span>American Family</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="carter-headshot-final.png" alt="Carter - Certified Roof Inspector" class="inspector-photo">
+                    <p class="inspector-title">Carter Booth<br>Certified Insurance Inspector</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Don't Let Storm Damage Go Unclaimed</h2>
+                <p>Most homeowners wait too long and lose thousands in potential insurance coverage</p>
+                <div class="cta-buttons">
+                    <a href="#home" class="btn-primary">Get Free Assessment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Carolina Roof Claims</h3>
+                    <p>Helping Triangle area homeowners navigate insurance claims and connect with certified local roofers. 10+ years experience, 3000+ claims processed.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Service Area</h3>
+                    <p>Triangle area and surrounding communities</p>
+                    <p>Raleigh, Durham, Chapel Hill, Cary, Apex, Wake Forest, and surrounding areas</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Carolina Roof Claims. Licensed and Insured. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
