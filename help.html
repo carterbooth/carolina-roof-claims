@@ -3,248 +3,704 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roof Problem Help Center | Carolina Roof Claims</title>
-    <meta name="description" content="Get help with roof problems, storm damage, and finding qualified contractors. Expert guidance for Triangle area homeowners.">
+    <title>Help Center | Carolina Roof Claims | Carolina Roof Claims</title>
+    <meta name="description" content="Get help with storm damage claims, insurance questions, and roof repair process. Expert guidance for homeowners.">
+    
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    
+    
+    
+    <style>
+        /* Modern CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Colors */
+            --primary: #1e40af;
+            --carolina-blue: #4f83cc;
+            --accent-orange: #f97316;
+            --storm-gray: #374151;
+            --storm-dark: #111827;
+            --cloud-white: #f8fafc;
+            --success: #059669;
+            --danger: #dc2626;
+            
+            /* Typography */
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* Spacing Scale */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+            --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.20);
+            
+            /* Radius */
+            --radius-sm: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--storm-gray);
+            background: linear-gradient(135deg, var(--cloud-white) 0%, #e2e8f0 100%);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(30, 64, 175, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-sm) 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: white;
+            text-decoration: none;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--accent-orange);
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+        }
+
+        .nav a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav a:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section with Beautiful Background */
+        .page-hero {
+            min-height: 70vh;
+            background: linear-gradient(-45deg, #1e40af, #2563eb, #3b82f6, #4f83cc, #1e40af);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+            padding-top: 100px;
+            padding-bottom: 60px;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Professional floating orbs */
+        .orbs-container {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        }
+        
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(2px);
+            animation: float linear infinite;
+        }
+        
+        .orb-1 { width: 40px; height: 40px; left: 15%; animation-duration: 25s; animation-delay: 0s; }
+        .orb-2 { width: 25px; height: 25px; left: 75%; animation-duration: 30s; animation-delay: -8s; }
+        .orb-3 { width: 50px; height: 50px; left: 45%; animation-duration: 35s; animation-delay: -15s; }
+        .orb-4 { width: 20px; height: 20px; left: 85%; animation-duration: 28s; animation-delay: -12s; }
+        .orb-5 { width: 35px; height: 35px; left: 25%; animation-duration: 32s; animation-delay: -20s; }
+        .orb-6 { width: 30px; height: 30px; left: 65%; animation-duration: 27s; animation-delay: -5s; }
+        .orb-7 { width: 15px; height: 15px; left: 5%; animation-duration: 33s; animation-delay: -18s; }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(0) scale(0); opacity: 0; }
+            10% { opacity: 1; transform: translateY(90vh) translateX(0) scale(1); }
+            90% { opacity: 1; transform: translateY(-10vh) translateX(0) scale(1); }
+            100% { transform: translateY(-20vh) translateX(0) scale(0); opacity: 0; }
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: var(--space-md);
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .page-hero p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: var(--space-xl);
+            opacity: 0.95;
+        }
+
+        .page-hero .hero-icon {
+            font-size: 4rem;
+            margin-bottom: var(--space-md);
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: var(--space-3xl) 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: linear-gradient(135deg, var(--cloud-white), #e2e8f0);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--storm-dark);
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .content-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(79, 131, 204, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--carolina-blue), var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg);
+            color: white;
+            font-size: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .content-card:hover .card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .content-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--storm-dark);
+            margin-bottom: var(--space-md);
+            text-align: center;
+        }
+
+        .content-card p, .content-card ul {
+            color: var(--storm-gray);
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+        }
+
+        .content-card ul {
+            margin-left: var(--space-md);
+        }
+
+        /* Assessment Form */
+        .assessment-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            border: 1px solid rgba(79, 131, 204, 0.15);
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: var(--space-md);
+        }
+
+        .form-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--storm-dark);
+            margin-bottom: var(--space-xs);
+        }
+
+        .form-header p {
+            color: var(--storm-gray);
+            font-size: 1rem;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: var(--space-sm);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--storm-dark);
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        .form-input {
+            padding: var(--space-xs) var(--space-sm);
+            border: 2px solid #e5e7eb;
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--carolina-blue);
+            box-shadow: 0 0 0 3px rgba(79, 131, 204, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .form-input::placeholder {
+            color: #9ca3af;
+        }
+
+        textarea.form-input {
+            min-height: 60px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, var(--accent-orange), #ea580c);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            padding: var(--space-sm) var(--space-lg);
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: var(--space-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .submit-button:hover::before {
+            left: 100%;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--storm-dark), var(--primary));
+            color: white;
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+
+        .footer p {
+            margin-bottom: var(--space-xs);
+            opacity: 0.9;
+        }
+
+        .footer .copyright {
+            margin-top: var(--space-lg);
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Special Elements */
+        .alert-box {
+            background: #fef3cd;
+            border-left: 4px solid #d97706;
+            padding: var(--space-lg);
+            margin: var(--space-lg) 0;
+            border-radius: var(--radius-md);
+        }
+
+        .alert-box strong {
+            color: #d97706;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--carolina-blue));
+            color: white;
+            padding: var(--space-2xl) 0;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-orange);
+            color: white;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-hero {
+                min-height: 60vh;
+                padding: var(--space-xl) 0;
+            }
+            
+            .nav {
+                display: none; /* Add mobile menu later */
+            }
+            
+            .content-section {
+                padding: var(--space-xl) 0;
+            }
+            
+            .container {
+                padding: 0 var(--space-sm);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .assessment-card {
+                padding: var(--space-md);
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <a href="index.html" style="color: white; text-decoration: none;">
+            <div class="header-content">
+                <a href="index.html" class="logo">
                     <i class="fas fa-home"></i>
-                    <span>Carolina Roof Claims</span>
+                    Carolina Roof Claims
                 </a>
+                <nav class="nav">
+                    <a href="index.html#home">Home</a>
+                    <a href="index.html#process">How It Works</a>
+                    <a href="index.html#about">About</a>
+                    <a href="help.html">Help Center</a>
+                </nav>
             </div>
-            <nav class="nav">
-                <a href="index.html#home">Home</a>
-                <a href="index.html#process">How It Works</a>
-                <a href="index.html#about">About</a>
-                <a href="help.html" class="active">Help Center</a>
-            </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main style="margin-top: 80px; padding: 60px 0;">
+    <!-- Beautiful Hero Section -->
+    <section class="page-hero">
+        <!-- Professional floating orbs -->
+        <div class="orbs-container">
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
+            <div class="floating-orb orb-4"></div>
+            <div class="floating-orb orb-5"></div>
+            <div class="floating-orb orb-6"></div>
+            <div class="floating-orb orb-7"></div>
+        </div>
+        
         <div class="container">
-            <div style="max-width: 1000px; margin: 0 auto;">
-                
-                <!-- Header -->
-                <header style="text-align: center; margin-bottom: 60px;">
-                    <h1 style="font-size: 3rem; color: #1e40af; margin-bottom: 20px;">
-                        Roof Problem Help Center
-                    </h1>
-                    <p style="font-size: 1.3rem; color: #666; line-height: 1.6; max-width: 600px; margin: 0 auto;">
-                        Expert guidance for common roof problems and help connecting with qualified contractors.
-                    </p>
-                </header>
-
-                <!-- Emergency Alert -->
-                <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 25px; margin-bottom: 50px;">
-                    <div style="display: flex; align-items: center; justify-content: center; gap: 15px; text-align: center;">
-                        <i class="fas fa-exclamation-triangle" style="color: #dc2626; font-size: 1.5rem;"></i>
-                        <div>
-                            <h3 style="color: #dc2626; margin-bottom: 5px;">Emergency Roof Issues?</h3>
-                            <p style="margin: 0; color: #7f1d1d;">Active leaks and storm damage need immediate attention.</p>
-                        </div>
-                        <a href="index.html#home" style="background: #dc2626; color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; font-weight: 600;">Get Help Now</a>
-                    </div>
-                </div>
-
-                <!-- Common Problems -->
-                <section style="margin-bottom: 60px;">
-                    <h2 style="color: #1e40af; margin-bottom: 30px; font-size: 2rem;">Common Roof Problems</h2>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-                        
-                        <!-- Water Stains -->
-                        <a href="problems/water-stains-ceiling.html" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-decoration: none; color: inherit; display: block; transition: transform 0.3s ease;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                                <div style="background: #dbeafe; color: #1e40af; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fas fa-tint" style="font-size: 1.2rem;"></i>
-                                </div>
-                                <h3 style="margin: 0; color: #1e40af;">Water Stains on Ceiling</h3>
-                            </div>
-                            <p style="margin: 0; color: #666; line-height: 1.5;">
-                                Brown or yellow stains appearing after storms indicate roof damage that needs professional assessment.
-                            </p>
-                        </a>
-
-                        <!-- Active Leak -->
-                        <a href="problems/ceiling-leak-rain.html" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-decoration: none; color: inherit; display: block; transition: transform 0.3s ease;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                                <div style="background: #fee2e2; color: #dc2626; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fas fa-home" style="font-size: 1.2rem;"></i>
-                                </div>
-                                <h3 style="margin: 0; color: #dc2626;">Ceiling Leak When It Rains</h3>
-                            </div>
-                            <p style="margin: 0; color: #666; line-height: 1.5;">
-                                Active ceiling leaks are emergencies that cause more damage with every rain. Get immediate help.
-                            </p>
-                        </a>
-
-                        <!-- Missing Shingles -->
-                        <a href="problems/missing-shingles.html" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-decoration: none; color: inherit; display: block; transition: transform 0.3s ease;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                                <div style="background: #fef3cd; color: #d97706; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fas fa-wind" style="font-size: 1.2rem;"></i>
-                                </div>
-                                <h3 style="margin: 0; color: #d97706;">Missing or Damaged Shingles</h3>
-                            </div>
-                            <p style="margin: 0; color: #666; line-height: 1.5;">
-                                Wind damage often removes shingles, leaving your roof exposed to water damage.
-                            </p>
-                        </a>
-
-                        <!-- Hail Damage -->
-                        <a href="problems/hail-damage.html" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-decoration: none; color: inherit; display: block; transition: transform 0.3s ease;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                                <div style="background: #e5e7eb; color: #4b5563; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fas fa-circle" style="font-size: 1.2rem;"></i>
-                                </div>
-                                <h3 style="margin: 0; color: #4b5563;">Hail Damage</h3>
-                            </div>
-                            <p style="margin: 0; color: #666; line-height: 1.5;">
-                                Hail damage is often invisible from the ground but can significantly reduce roof lifespan.
-                            </p>
-                        </a>
-
-                        <!-- Insurance Claims -->
-                        <a href="problems/insurance-claims.html" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-decoration: none; color: inherit; display: block; transition: transform 0.3s ease;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                                <div style="background: #dcfce7; color: #059669; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fas fa-file-contract" style="font-size: 1.2rem;"></i>
-                                </div>
-                                <h3 style="margin: 0; color: #059669;">Insurance Claims Help</h3>
-                            </div>
-                            <p style="margin: 0; color: #666; line-height: 1.5;">
-                                Navigate the insurance claim process with expert guidance and documentation.
-                            </p>
-                        </a>
-
-                        <!-- General Assessment -->
-                        <a href="index.html#home" style="background: #1e40af; color: white; padding: 30px; border-radius: 8px; text-decoration: none; display: block; transition: transform 0.3s ease;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                                <div style="background: rgba(255,255,255,0.2); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fas fa-search" style="font-size: 1.2rem;"></i>
-                                </div>
-                                <h3 style="margin: 0; color: white;">Not Sure What's Wrong?</h3>
-                            </div>
-                            <p style="margin: 0; color: rgba(255,255,255,0.9); line-height: 1.5;">
-                                Get a professional assessment to identify problems and determine next steps.
-                            </p>
-                        </a>
-                    </div>
-                </section>
-
-                <!-- Find Contractors -->
-                <section style="margin-bottom: 60px;">
-                    <h2 style="color: #1e40af; margin-bottom: 30px; font-size: 2rem;">Need a Qualified Roofer?</h2>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-                        
-                        <!-- General Roofers -->
-                        <a href="contractors/roofers-near-me.html" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-decoration: none; color: inherit; display: block; transition: transform 0.3s ease;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                                <div style="background: #dcfce7; color: #059669; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fas fa-users" style="font-size: 1.2rem;"></i>
-                                </div>
-                                <h3 style="margin: 0; color: #059669;">Find Qualified Roofers</h3>
-                            </div>
-                            <p style="margin: 0; color: #666; line-height: 1.5;">
-                                Get connected with pre-screened contractors who specialize in insurance work and have verified credentials.
-                            </p>
-                        </a>
-
-                        <!-- Storm Damage -->
-                        <a href="contractors/storm-damage.html" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-decoration: none; color: inherit; display: block; transition: transform 0.3s ease;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                                <div style="background: #fee2e2; color: #dc2626; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fas fa-bolt" style="font-size: 1.2rem;"></i>
-                                </div>
-                                <h3 style="margin: 0; color: #dc2626;">Storm Damage Specialists</h3>
-                            </div>
-                            <p style="margin: 0; color: #666; line-height: 1.5;">
-                                Emergency contractors who specialize in storm damage assessment and work with insurance adjusters.
-                            </p>
-                        </a>
-                    </div>
-                </section>
-
-                <!-- Local Service Area -->
-                <section style="background: #f9fafb; padding: 40px; border-radius: 8px;">
-                    <div style="text-align: center;">
-                        <h2 style="color: #1e40af; margin-bottom: 20px;">Serving Triangle Area Homeowners</h2>
-                        <p style="margin-bottom: 25px; color: #666; font-size: 1.1rem;">
-                            Professional roof assessment and contractor connections throughout:
-                        </p>
-                        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 30px;">
-                            <span style="background: white; color: #1e40af; padding: 8px 16px; border-radius: 20px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Raleigh</span>
-                            <span style="background: white; color: #1e40af; padding: 8px 16px; border-radius: 20px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Durham</span>
-                            <span style="background: white; color: #1e40af; padding: 8px 16px; border-radius: 20px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Chapel Hill</span>
-                            <span style="background: white; color: #1e40af; padding: 8px 16px; border-radius: 20px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Cary</span>
-                            <span style="background: white; color: #1e40af; padding: 8px 16px; border-radius: 20px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Apex</span>
-                            <span style="background: white; color: #1e40af; padding: 8px 16px; border-radius: 20px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Wake Forest</span>
-                            <span style="background: white; color: #1e40af; padding: 8px 16px; border-radius: 20px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Holly Springs</span>
-                            <span style="background: white; color: #1e40af; padding: 8px 16px; border-radius: 20px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">& More</span>
-                        </div>
-                        <p style="margin: 0; color: #1e40af; font-weight: 600;">
-                            10+ years experience • 3000+ claims processed • Carter Booth, Certified Inspector
-                        </p>
-                    </div>
-                </section>
-
+            <div class="page-hero-content">
+                <div class="hero-icon"><i class="fas fa-question-circle" style="color: #4f83cc;"></i></div>
+                <h1>How Can We Help You?</h1>
+                <p>Expert guidance for storm damage claims, insurance questions, and connecting with qualified contractors.</p>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Dynamic Content Sections -->
+    
+<section class="content-section">
+    <div class="container">
+        <div class="content-grid">
+            <div class="content-card">
+                <div class="card-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h3>Storm Damage Questions</h3>
+                <p>Get answers about identifying damage, working with insurance, and the repair process.</p>
+                <ul>
+                    <li>How to identify storm damage</li>
+                    <li>Insurance claim process</li>
+                    <li>Working with contractors</li>
+                    <li>Timeline expectations</li>
+                </ul>
+            </div>
+            
+            <div class="content-card">
+                <div class="card-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3>Contact Support</h3>
+                <p>Speak directly with our certified roof inspectors for immediate assistance.</p>
+                <div class="alert-box">
+                    <strong>Call us:</strong> (910) 538-6552 for emergency situations.
+                </div>
+            </div>
+            
+            <div class="content-card">
+                <div class="card-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Response Times</h3>
+                <p>We understand storm damage is urgent. Here are our typical response times:</p>
+                <ul>
+                    <li>Emergency situations: Same day</li>
+                    <li>Urgent damage: Within 24 hours</li>
+                    <li>General assessments: 1-2 business days</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Assessment Form Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: var(--space-md);">Get Professional Help Today</h2>
+            <p style="font-size: 1.2rem; margin-bottom: var(--space-xl); opacity: 0.9;">Connect with certified contractors and maximize your insurance claim</p>
+            
+            <div class="assessment-card">
+                <div class="form-header">
+                    <h2>Free Assessment</h2>
+                    <p>Expert evaluation and contractor matching</p>
+                </div>
+                
+                <form class="form-grid" action="submit-assessment" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="John Smith" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(555) 123-4567" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Property Address</label>
+                        <input type="text" id="address" name="address" class="form-input" placeholder="Street address, City, State" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="damage-type">Type of Damage</label>
+                        <select id="damage-type" name="damage_type" class="form-input" required>
+                            <option value="">Select damage type...</option>
+                            <option value="hail">Hail Damage</option>
+                            <option value="wind">Wind Damage</option>
+                            <option value="water">Water/Leak Damage</option>
+                            <option value="storm">General Storm Damage</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="urgency">Urgency Level</label>
+                        <select id="urgency" name="urgency" class="form-input" required>
+                            <option value="">How urgent is this?</option>
+                            <option value="emergency">Emergency (Active leak/danger)</option>
+                            <option value="urgent">Urgent (Within 1-2 days)</option>
+                            <option value="soon">Soon (Within a week)</option>
+                            <option value="planning">Planning ahead</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-paper-plane"></i>
+                        Get Free Assessment
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Carolina Roof Claims</h3>
-                    <p>Helping Triangle area homeowners connect with qualified contractors and navigate insurance claims. Professional guidance for roof problems.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Service Area</h3>
-                    <p>Triangle area: Raleigh, Durham, Chapel Hill, Cary, Apex, Wake Forest, Holly Springs, and surrounding communities</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Carolina Roof Claims. All rights reserved.</p>
+            <h3>Carolina Roof Claims</h3>
+            <p><i class="fas fa-envelope"></i> Professional storm damage assessment and insurance claim assistance</p>
+            <p><i class="fas fa-map-marker-alt"></i> Serving the Triangle area and surrounding regions</p>
+            
+            <div class="copyright">
+                &copy; 2026 Carolina Roof Claims. Licensed and Insured. All rights reserved.
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
-    
-    <style>
-    /* Hover effects */
-    a[href*="problems/"]:hover,
-    a[href*="contractors/"]:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-    
-    a[href*="index.html#home"]:hover {
-        transform: translateY(-3px);
-        background: #1e3a8a !important;
-    }
-    
-    @media (max-width: 768px) {
-        .container {
-            padding: 0 15px;
-        }
-        h1 {
-            font-size: 2rem !important;
-        }
-        h2 {
-            font-size: 1.5rem !important;
-        }
-    }
-    </style>
 </body>
 </html>

@@ -3,261 +3,675 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Stains on Ceiling After Storm in Raleigh, NC | Carolina Roof Claims</title>
+    <title>Water Stains on Ceiling After Storm in Raleigh, NC | Carolina Roof Claims | Carolina Roof Claims</title>
     <meta name="description" content="Brown or yellow water stains appearing on your ceiling after recent storms in Raleigh? Get immediate help from certified roof inspectors. Free assessment, insurance claim assistance. Call now!">
-    <link href="../styles.css" rel="stylesheet">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Carolina Roof Claims",
-        "description": "Professional roof inspection and insurance claim assistance",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Raleigh",
-            "addressRegion": "NC",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "35.7796",
-            "longitude": "-78.6382"
-        },
-        "areaServed": "Raleigh, North Carolina",
-        "serviceType": "Roof Inspection and Insurance Claims"
-    }
-    </script>
+    
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    
+    
+    <style>
+        /* Modern CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Colors */
+            --primary: #1e40af;
+            --carolina-blue: #4f83cc;
+            --accent-orange: #f97316;
+            --storm-gray: #374151;
+            --storm-dark: #111827;
+            --cloud-white: #f8fafc;
+            --success: #059669;
+            --danger: #dc2626;
+            
+            /* Typography */
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* Spacing Scale */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+            --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.20);
+            
+            /* Radius */
+            --radius-sm: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--storm-gray);
+            background: linear-gradient(135deg, var(--cloud-white) 0%, #e2e8f0 100%);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(30, 64, 175, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-sm) 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: white;
+            text-decoration: none;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--accent-orange);
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+        }
+
+        .nav a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav a:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section with Beautiful Background */
+        .page-hero {
+            min-height: 70vh;
+            background: linear-gradient(-45deg, #1e40af, #2563eb, #3b82f6, #4f83cc, #1e40af);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+            padding-top: 100px;
+            padding-bottom: 60px;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Professional floating orbs */
+        .orbs-container {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        }
+        
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(2px);
+            animation: float linear infinite;
+        }
+        
+        .orb-1 { width: 40px; height: 40px; left: 15%; animation-duration: 25s; animation-delay: 0s; }
+        .orb-2 { width: 25px; height: 25px; left: 75%; animation-duration: 30s; animation-delay: -8s; }
+        .orb-3 { width: 50px; height: 50px; left: 45%; animation-duration: 35s; animation-delay: -15s; }
+        .orb-4 { width: 20px; height: 20px; left: 85%; animation-duration: 28s; animation-delay: -12s; }
+        .orb-5 { width: 35px; height: 35px; left: 25%; animation-duration: 32s; animation-delay: -20s; }
+        .orb-6 { width: 30px; height: 30px; left: 65%; animation-duration: 27s; animation-delay: -5s; }
+        .orb-7 { width: 15px; height: 15px; left: 5%; animation-duration: 33s; animation-delay: -18s; }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(0) scale(0); opacity: 0; }
+            10% { opacity: 1; transform: translateY(90vh) translateX(0) scale(1); }
+            90% { opacity: 1; transform: translateY(-10vh) translateX(0) scale(1); }
+            100% { transform: translateY(-20vh) translateX(0) scale(0); opacity: 0; }
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: var(--space-md);
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .page-hero p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: var(--space-xl);
+            opacity: 0.95;
+        }
+
+        .page-hero .hero-icon {
+            font-size: 4rem;
+            margin-bottom: var(--space-md);
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: var(--space-3xl) 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: linear-gradient(135deg, var(--cloud-white), #e2e8f0);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--storm-dark);
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .content-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(79, 131, 204, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--carolina-blue), var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg);
+            color: white;
+            font-size: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .content-card:hover .card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .content-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--storm-dark);
+            margin-bottom: var(--space-md);
+            text-align: center;
+        }
+
+        .content-card p, .content-card ul {
+            color: var(--storm-gray);
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+        }
+
+        .content-card ul {
+            margin-left: var(--space-md);
+        }
+
+        /* Assessment Form */
+        .assessment-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            border: 1px solid rgba(79, 131, 204, 0.15);
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: var(--space-md);
+        }
+
+        .form-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--storm-dark);
+            margin-bottom: var(--space-xs);
+        }
+
+        .form-header p {
+            color: var(--storm-gray);
+            font-size: 1rem;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: var(--space-sm);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--storm-dark);
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        .form-input {
+            padding: var(--space-xs) var(--space-sm);
+            border: 2px solid #e5e7eb;
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--carolina-blue);
+            box-shadow: 0 0 0 3px rgba(79, 131, 204, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .form-input::placeholder {
+            color: #9ca3af;
+        }
+
+        textarea.form-input {
+            min-height: 60px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, var(--accent-orange), #ea580c);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            padding: var(--space-sm) var(--space-lg);
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: var(--space-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .submit-button:hover::before {
+            left: 100%;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--storm-dark), var(--primary));
+            color: white;
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+
+        .footer p {
+            margin-bottom: var(--space-xs);
+            opacity: 0.9;
+        }
+
+        .footer .copyright {
+            margin-top: var(--space-lg);
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Special Elements */
+        .alert-box {
+            background: #fef3cd;
+            border-left: 4px solid #d97706;
+            padding: var(--space-lg);
+            margin: var(--space-lg) 0;
+            border-radius: var(--radius-md);
+        }
+
+        .alert-box strong {
+            color: #d97706;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--carolina-blue));
+            color: white;
+            padding: var(--space-2xl) 0;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-orange);
+            color: white;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-hero {
+                min-height: 60vh;
+                padding: var(--space-xl) 0;
+            }
+            
+            .nav {
+                display: none; /* Add mobile menu later */
+            }
+            
+            .content-section {
+                padding: var(--space-xl) 0;
+            }
+            
+            .container {
+                padding: 0 var(--space-sm);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .assessment-card {
+                padding: var(--space-md);
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <a href="../index.html">
-                    <i class="fas fa-home-lg-alt"></i>
-                    <span>Carolina Roof Claims</span>
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-home"></i>
+                    Carolina Roof Claims
                 </a>
-            </div>
-            <nav class="nav">
-                <a href="../index.html#home">Home</a>
-                <a href="../index.html#process">How It Works</a>
-                <a href="../index.html#about">About</a>
-            </nav>
-            <div class="contact-info">
-                <i class="fas fa-shield-alt"></i>
-                <span>Licensed & Insured</span>
+                <nav class="nav">
+                    <a href="../index.html#home">Home</a>
+                    <a href="../index.html#process">How It Works</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../help.html">Help Center</a>
+                </nav>
             </div>
         </div>
     </header>
 
-    <!-- Emergency Alert Bar -->
-    <div class="emergency-alert">
+    <!-- Beautiful Hero Section -->
+    <section class="page-hero">
+        <!-- Professional floating orbs -->
+        <div class="orbs-container">
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
+            <div class="floating-orb orb-4"></div>
+            <div class="floating-orb orb-5"></div>
+            <div class="floating-orb orb-6"></div>
+            <div class="floating-orb orb-7"></div>
+        </div>
+        
         <div class="container">
-            <i class="fas fa-exclamation-triangle"></i>
-            <strong>Water Stains on Ceiling After Storm in Raleigh?</strong> Don't wait - storm damage claims have deadlines. Get your free assessment today!
-            <a href="#assessment-form" class="alert-cta">Get Help Now →</a>
+            <div class="page-hero-content">
+                <div class="hero-icon"><i class="fas fa-home" style="color: #dc2626;"></i></div>
+                <h1>Storm Damage After Storm?</h1>
+                <p>Get professional help with storm damage assessment and insurance claims.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Content Sections -->
+    
+<section class="content-section">
+    <div class="container">
+        <div class="content-grid">
+            <div class="content-card">
+                <div class="card-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Expert Assessment</h3>
+                <p>Our certified inspectors can identify all damage related to your storm damage situation.</p>
+            </div>
+            
+            <div class="content-card">
+                <div class="card-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <h3>Documentation</h3>
+                <p>We provide detailed reports and photos needed for successful insurance claims.</p>
+            </div>
+            
+            <div class="content-card">
+                <div class="card-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Professional Repair</h3>
+                <p>Connect with qualified contractors who specialize in storm damage restoration.</p>
+            </div>
         </div>
     </div>
+</section>
 
-    <!-- Hero Section -->
-    <section class="hero problem-hero">
+
+    <!-- Assessment Form Section -->
+    <section class="cta-section">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Water Stains on Ceiling After Storm in Raleigh, NC?</h1>
-                    <p class="hero-subtitle">Brown or yellow water stains appearing on your ceiling after recent storms can indicate serious roof damage that needs immediate professional assessment. Our certified inspectors serve Raleigh and help navigate insurance claims.</p>
+            <h2 style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: var(--space-md);">Get Professional Help Today</h2>
+            <p style="font-size: 1.2rem; margin-bottom: var(--space-xl); opacity: 0.9;">Connect with certified contractors and maximize your insurance claim</p>
+            
+            <div class="assessment-card">
+                <div class="form-header">
+                    <h2>Free Assessment</h2>
+                    <p>Expert evaluation and contractor matching</p>
+                </div>
+                
+                <form class="form-grid" action="../submit-assessment" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="John Smith" required>
+                    </div>
                     
-                    <div class="urgency-indicators">
-                        <div class="indicator">
-                            <i class="fas fa-clock"></i>
-                            <span>Insurance claims have deadlines</span>
-                        </div>
-                        <div class="indicator">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>10+ years experience</span>
-                        </div>
-                        <div class="indicator">
-                            <i class="fas fa-certificate"></i>
-                            <span>Certified inspectors</span>
-                        </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
                     </div>
-
-                    <div class="cta-buttons">
-                        <a href="#assessment-form" class="btn-primary">Get Free Assessment</a>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(555) 123-4567" required>
                     </div>
-                </div>
-
-                <div class="hero-form-container">
-                    <div class="form-container" id="assessment-form">
-                        <h3>Get Your Free Raleigh Roof Assessment</h3>
-                        <p class="form-subtitle">Connect with insurance specialist contractors in 24 hours</p>
-                        
-                        <form id="leadForm" class="lead-form">
-                            <input type="hidden" name="source_page" value="water-stains-ceiling-storm-raleigh">
-                            <input type="hidden" name="city" value="Raleigh">
-                            <input type="hidden" name="problem_type" value="water_damage">
-                            
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="address">Property Address *</label>
-                                <input type="text" id="address" name="address" placeholder="Street address, Raleigh, NC" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="damage_date">When did you notice the water stains? *</label>
-                                <select id="damage_date" name="damage_date" required>
-                                    <option value="">Select timeframe...</option>
-                                    <option value="recent_storm">After recent storm (last 30 days)</option>
-                                    <option value="last_season">Last storm season</option>
-                                    <option value="gradual">Gradually over time</option>
-                                    <option value="not_sure">Just noticed it</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="urgency">How urgent is this? *</label>
-                                <select id="urgency" name="urgency" required>
-                                    <option value="">Select urgency...</option>
-                                    <option value="emergency">Emergency - active leak</option>
-                                    <option value="urgent">Urgent - visible damage</option>
-                                    <option value="moderate">Moderate - concern</option>
-                                    <option value="planning">Planning ahead</option>
-                                </select>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">
-                                <i class="fas fa-search"></i>
-                                Get My Free Assessment
-                            </button>
-                        </form>
+                    
+                    <div class="form-group">
+                        <label for="address">Property Address</label>
+                        <input type="text" id="address" name="address" class="form-input" placeholder="Street address, City, State" required>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What This Means Section -->
-    <section class="problem-explanation">
-        <div class="container">
-            <h2>What Does Water Stains on Ceiling After Storm Mean in Raleigh?</h2>
-            <div class="explanation-content">
-                <div class="explanation-text">
-                    <p>Water stains on your ceiling after a storm are a clear sign that water has penetrated your roof system. These stains typically appear as brown, yellow, or dark discolored patches and indicate that:</p>
-        
-        <ul>
-            <li><strong>Your roof has been compromised</strong> - Storm damage has created entry points for water</li>
-            <li><strong>Structural damage may be present</strong> - Water infiltration can weaken ceiling materials and insulation</li>
-            <li><strong>Mold growth is likely</strong> - Moisture trapped in ceiling materials creates perfect conditions for mold</li>
-            <li><strong>Insurance coverage may apply</strong> - Storm-related water damage is often covered by homeowner policies</li>
-        </ul>
-        
-        <p>In {{CITY}}, we commonly see this type of damage after severe thunderstorms, hail, and high winds that can lift or damage shingles.</p>
-
-                    <div class="warning-box">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <h4>Don't Wait - Act Fast</h4>
-                        <p>Water stains indicate active roof penetration. Every day you wait increases the risk of mold growth, structural damage, and insurance complications. Many policies require prompt reporting of storm damage.</p>
+                    
+                    <div class="form-group">
+                        <label for="damage-type">Type of Damage</label>
+                        <select id="damage-type" name="damage_type" class="form-input" required>
+                            <option value="">Select damage type...</option>
+                            <option value="hail">Hail Damage</option>
+                            <option value="wind">Wind Damage</option>
+                            <option value="water">Water/Leak Damage</option>
+                            <option value="storm">General Storm Damage</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
-
-                    <div class="next-steps">
-                        <h3>What You Should Do Right Now:</h3>
-                        <ol>
-                            <li><strong>Document everything</strong> - Take photos of the water stains</li>
-                            <li><strong>Check for other signs</strong> - Look for additional damage</li>
-                            <li><strong>Contact a professional</strong> - Get a certified inspection</li>
-                            <li><strong>Call your insurance</strong> - Report potential storm damage</li>
-                        </ol>
+                    
+                    <div class="form-group">
+                        <label for="urgency">Urgency Level</label>
+                        <select id="urgency" name="urgency" class="form-input" required>
+                            <option value="">How urgent is this?</option>
+                            <option value="emergency">Emergency (Active leak/danger)</option>
+                            <option value="urgent">Urgent (Within 1-2 days)</option>
+                            <option value="soon">Soon (Within a week)</option>
+                            <option value="planning">Planning ahead</option>
+                        </select>
                     </div>
-                </div>
-                
-                <div class="explanation-sidebar">
-                    <div class="cta-box">
-                        <h4>Need Help in Raleigh?</h4>
-                        <p>Carter Booth has helped Raleigh homeowners with 3000+ insurance claims</p>
-                        <a href="#assessment-form" class="btn-primary">Get Free Assessment</a>
-                    </div>
-
-                    <div class="trust-indicators">
-                        <div class="trust-item">
-                            <i class="fas fa-certificate"></i>
-                            <span>Licensed Inspector</span>
-                        </div>
-                        <div class="trust-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Insurance Certified</span>
-                        </div>
-                        <div class="trust-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Serving Raleigh</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Common Causes Section -->
-    <section class="causes-section">
-        <div class="container">
-            <h2>Common Causes of Water Stains on Ceiling After Storm in Raleigh</h2>
-            <div class="causes-grid">
-                
-        <div class="cause-item">
-            <h4>Missing or Damaged Shingles</h4>
-            <p>High winds can lift or tear shingles, exposing roof decking</p>
-        </div>
-        <div class="cause-item">
-            <h4>Hail Impact Damage</h4>
-            <p>Hail can crack shingles and create multiple small leak points</p>
-        </div>
-        <div class="cause-item">
-            <h4>Flashing Failure</h4>
-            <p>Storm winds can damage flashing around chimneys, vents, and roof edges</p>
-        </div>
-        <div class="cause-item">
-            <h4>Ice Dam Formation</h4>
-            <p>Winter storms can create ice dams that force water under shingles</p>
-        </div>
-            </div>
-
-            <div class="cta-section">
-                <h3>Spotted Water Stains on Ceiling After Storm in Raleigh?</h3>
-                <p>Don't let potential insurance claims expire. Get professional assessment today.</p>
-                <a href="#assessment-form" class="btn-primary">Get Free Assessment Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Local Service Area -->
-    <section class="service-area">
-        <div class="container">
-            <h2>Serving Raleigh and Triangle Area</h2>
-            <div class="area-info">
-                <p>We provide professional roof inspections and insurance claim assistance throughout Raleigh and the greater Triangle area, including:</p>
-                <div class="cities-grid">
-                    <span>Raleigh</span>
-                    <span>Durham</span>
-                    <span>Chapel Hill</span>
-                    <span>Cary</span>
-                    <span>Apex</span>
-                    <span>Wake Forest</span>
-                    <span>Holly Springs</span>
-                    <span>Fuquay-Varina</span>
-                </div>
+                    
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-paper-plane"></i>
+                        Get Free Assessment
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -265,25 +679,14 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Carolina Roof Claims</h3>
-                    <p>Helping Triangle area homeowners navigate insurance claims and connect with certified local roofers. 10+ years experience, 3000+ claims processed.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Service Area</h3>
-                    <p>Raleigh and Triangle area within 50-mile radius from RDU</p>
-                    <p>Raleigh, Durham, Chapel Hill, Cary, Apex, Wake Forest, and surrounding areas</p>
-                </div>
-            </div>
+            <h3>Carolina Roof Claims</h3>
+            <p><i class="fas fa-envelope"></i> Professional storm damage assessment and insurance claim assistance</p>
+            <p><i class="fas fa-map-marker-alt"></i> Serving the Triangle area and surrounding regions</p>
             
-            <div class="footer-bottom">
-                <p>&copy; 2026 Carolina Roof Claims. Licensed and Insured. All rights reserved.</p>
+            <div class="copyright">
+                &copy; 2026 Carolina Roof Claims. Licensed and Insured. All rights reserved.
             </div>
         </div>
     </footer>
-
-    <script src="../script.js"></script>
 </body>
 </html>
