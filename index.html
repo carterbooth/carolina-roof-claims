@@ -133,7 +133,7 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: 95vh;
             background: linear-gradient(135deg, var(--primary) 0%, var(--carolina-blue) 50%, var(--storm-gray) 100%);
             background-size: 400% 400%;
             animation: gradientShift 20s ease infinite;
@@ -142,6 +142,7 @@
             align-items: center;
             color: white;
             overflow: hidden;
+            padding-top: 100px;
         }
 
         @keyframes gradientShift {
@@ -169,8 +170,8 @@
             z-index: 1;
             display: grid;
             grid-template-columns: 1fr 400px;
-            gap: var(--space-3xl);
-            align-items: center;
+            gap: var(--space-xl);
+            align-items: flex-start;
         }
 
         .hero-text h1 {
@@ -247,7 +248,7 @@
             right: 0;
             height: 4px;
             background: linear-gradient(90deg, var(--carolina-blue), var(--accent-orange));
-            border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+            border-radius: 1.5rem 1.5rem 0 0;
         }
 
         .form-header {
