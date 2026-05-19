@@ -13,7 +13,7 @@
     --storm-gray: #374151;
     --cloud-white: #f8fafc;
     --storm-dark: #111827;
-    --accent-orange: #f97316;
+    --accent-red: #dc2626;
     --success-green: #059669;
     --warning-red: #dc2626;
     
@@ -105,7 +105,7 @@ body {
 .logo i {
     margin-right: var(--space-xs);
     font-size: 1.8rem;
-    color: var(--accent-orange);
+    color: var(--accent-red);
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
@@ -131,7 +131,7 @@ body {
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--accent-orange);
+    background: var(--accent-red);
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -233,7 +233,7 @@ body {
 
 .badge i {
     margin-right: var(--space-xs);
-    color: var(--accent-orange);
+    color: var(--accent-red);
     font-size: 1.1rem;
 }
 
@@ -261,7 +261,7 @@ body {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--carolina-blue), var(--accent-orange), var(--carolina-blue));
+    background: linear-gradient(90deg, var(--carolina-blue), var(--accent-red), var(--carolina-blue));
     border-radius: var(--radius-xl) var(--radius-xl) 0 0;
 }
 
@@ -324,7 +324,7 @@ body {
 
 .submit-btn {
     width: 100%;
-    background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
+    background: linear-gradient(135deg, var(--accent-red) 0%, #b91c1c 100%);
     color: white;
     padding: var(--space-md);
     border: none;
@@ -401,7 +401,7 @@ body {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--carolina-blue), var(--accent-orange));
+    background: linear-gradient(90deg, var(--carolina-blue), var(--accent-red));
     border-radius: 2px;
 }
 
@@ -438,7 +438,7 @@ body {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--carolina-blue), var(--accent-orange));
+    background: linear-gradient(90deg, var(--carolina-blue), var(--accent-red));
     transform: scaleX(0);
     transition: transform 0.3s ease;
     border-radius: 0 0 var(--radius-lg) var(--radius-lg);
