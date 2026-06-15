@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Submit lead to backend
     async function submitToBackend(data) {
-        const response = await fetch('http://localhost:3001/api/leads/submit', {
+        const response = await fetch('https://contractor-portal-backend.vercel.app/api/leads/submit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
