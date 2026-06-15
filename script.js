@@ -205,20 +205,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Success message with tier info
     function showSuccessMessage(result = {}) {
-        const tierInfo = {
-            1: 'Premium Emergency',
-            2: 'Standard Priority', 
-            3: 'Basic Assessment'
-        };
-        
         const message = document.createElement('div');
         message.className = 'success-message';
         message.innerHTML = `
             <div class="success-content">
                 <i class="fas fa-check-circle"></i>
-                <h3>Assessment Request Received!</h3>
-                <p>Thank you! Your request has been classified as <strong>${tierInfo[result.tier] || 'Priority'}</strong> and a qualified contractor will contact you within 24 hours.</p>
-                <small>Lead ID: ${result.leadId || 'Generated'} • Check your email for confirmation details.</small>
+                <h3>Thank you!</h3>
+                <p>We've received your assessment request and will be in touch soon.</p>
             </div>
         `;
         
